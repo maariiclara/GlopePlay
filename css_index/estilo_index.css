@@ -1,0 +1,264 @@
+*{margin:0;
+    padding:0;
+} /* Não deixar que os itens da página atinjam as estremidades */
+    
+body{
+    background-color: #1d1d1d; /* #1d1d1d rgb(27, 25, 25) cor do fundo */ 
+    font-family: 'Times New Roman', Times, serif; /* tipo da fonte */ 
+    font-size: 20px; /* tamanho da fonte */ 
+    font-style: normal; /* estilo da fonte */ 
+}
+   
+header{
+    background-color: black;
+}
+    
+header img{ /* Definições da imagem que estão dentro do cabeçalho */
+    width: 250px; /* Largura da imagem */
+    height: 100px; /* Altura da imagem */
+    margin: 10px; /* Margem da imagem */
+    margin-left: 20px;
+}
+
+#menu ul{ /* ID para lista */
+    list-style: none; /* Sem nenhum estilo na lista, tira os pontos */
+    margin-right: 272px;
+    align-items: center;
+}
+
+#menu ul li i{ 
+    margin-right: 5px; /* Adiciona um espaçamento à direita do ícone */
+}
+
+#menu ul li { 
+    display: flex; /* Transforma o li em um container flexbox */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-top: -50px;
+  }
+    
+#menu li{
+    position: relative; /* Posição relativa do item da lista */
+}
+    
+#menu li a{ 
+    color: white; /* Cor do texto do menu */
+    text-decoration: none; /* Sem estilo no texto */
+    padding: 10px 10px; /* Espaçamento entre os textos no Menu */
+    display: block; /* Opções do menu bloqueadas na posição atual */
+}
+    
+#menu li a:hover{ /* trocar a cor do fundo, quando passar o mouse */
+    background: #ff5055; /* Fundo do efeito */
+    color: #fff; /* Cor do texto no fundo */
+    text-shadow: 0px 0px 5px black; /* Sombra do efeito */
+}
+    
+#menu li ul{
+    position: absolute;
+    top: 25px; /* Espaçamento do topo */
+    left: 0; /* Espaçamento da esquerda */
+    background-color: #fff;
+    display: none;
+}
+    
+menu li:hover ul, #menu li.over ul{
+    display: block; /* Durante o efeito não moverá o menu */
+}
+    
+header, #menu, #menu ul{
+    display: flex;
+}
+    
+footer{
+    background-color: black;
+    display: flex; /* Utiliza flexbox para organizar os elementos */
+    justify-content: space-between; /* flex-end Alinha os elementos para o final da linha */
+    align-items: center; /* Alinha os elementos verticalmente ao centro */
+    padding: 10px; /* Adiciona um espaçamento interno */
+}
+    
+footer img{
+    width: 250px;
+    height: 100px;
+}
+    
+footer p{
+    color: white;
+    margin-right: 20px; /* Espaçamento entre o texto e a imagem */
+    font-family: 'Times New Roman', Times, serif; /* tipo da fonte */ 
+    font-size: 20px; /* tamanho da fonte */ 
+    font-style: normal; /* estilo da fonte */ 
+    text-align: center;
+}
+
+.rodape{
+    text-align: left;
+    margin-left: 12px; /* 16.5 */
+}
+
+#menu{
+    list-style: none;
+    margin: 0 auto; /* Centraliza horizontalmente o menu */
+    margin-top: 45px; /* Ajusta a margem superior */
+}
+
+.lupa{
+    margin-top: 45px;
+    margin-right: 25px;
+}
+
+.search-box { /* Barra de pesquisa */
+    position: absolute; 
+    margin-top: 60px; 
+    margin-left: 1127px; 
+    transform: translate(-50%, -50%); /* Centraliza horizontal e verticalmente */
+    background: #1d1d1d; 
+    height: 40px; 
+    border-radius: 40px;
+    padding: 10px; 
+}
+
+.search-btn { /* Botão de busca */
+    color: #ff5055;
+    float: right; 
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    background: #1d1d1d; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    transition: 2s; 
+}
+
+.search-txt { /* Texto para pesquisa */
+    border: none; 
+    background: none; 
+    outline: none; 
+    float: left; 
+    padding: 0; 
+    color: white; 
+    font-size: 16px; 
+    transition: 0.4s; 
+    line-height: 40px; 
+    width: 0px; 
+}
+
+.search-box:hover > .search-txt { /* Expandir */
+    width: 85px; 
+    padding: 2px;
+}
+
+.search-box:hover > .search-btn { 
+    background: white; 
+}
+
+.notification{
+    position: absolute; 
+    margin-top: 60px; 
+    margin-left: 1240px; 
+    transform: translate(-50%, -50%); 
+    background: #1d1d1d; 
+    height: 40px; 
+    border-radius: 40px;
+    padding: 10px; 
+    z-index: 10px;
+    
+    color: #ff5055; 
+    float: right; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    background: #1d1d1d; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: 2s; 
+}
+
+.box-notification{
+    margin-top: 168px;
+    background-color: #342f2f; /* #2a0c36  -- #1d1d1d*/
+    width: 200px;
+    height: 100px;
+    color: white;
+    text-size-adjust: 16px;
+    text-align: center;
+    align-items: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.img{
+    width: 150px; 
+    height: 40px;
+}
+
+.notification:hover .box-notification{
+    visibility: visible;
+    opacity: 1;
+}
+
+.enter{
+    position: absolute; 
+    margin-top: 60px; 
+    margin-left: 1310px; 
+    transform: translate(-50%, -50%); 
+    background: #1d1d1d; 
+    height: 40px; 
+    border-radius: 40px;
+    padding: 10px; 
+    
+    color: #ff5055; 
+    float: right; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    background: #1d1d1d; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: 2s; 
+}
+
+.box { /* Barra de pesquisa rodapé */
+    position: absolute; 
+    margin-top: 60px; 
+    margin-left: 750px; 
+    transform: translate(-50%, -50%); 
+    background: #1d1d1d; 
+    height: 40px; 
+    border-radius: 40px; 
+    padding: 10px; 
+    width: 560px;
+}
+
+.btn { /* Botão de busca rodapé */
+    color: #ff5055; 
+    float: right; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    background: white; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: 2s; 
+}
+
+.txt { /* Texto para pesquisa rodapé */
+    border: none; 
+    background: none; 
+    outline: none; 
+    float: left; 
+    padding: 0; 
+    color: white; 
+    font-size: 16px; 
+    line-height: 40px; 
+    width: 0px; 
+    width: 520px; 
+    flex: 1;
+}
